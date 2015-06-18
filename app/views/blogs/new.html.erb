@@ -1,0 +1,9 @@
+<div class="container">
+ <% form_for @blog do |f| %>
+     <%= f.label :title %>
+     <%= f.text_field :title, :autofocus => true, class: 'form-control' %>
+     <%= f.label :body %>
+     <%= f.text_field :body, :autofocus => true, class: 'form-control' %>
+    <%= f.submit 'Write it!' %>
+<% end %>
+</div>
