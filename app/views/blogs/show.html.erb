@@ -1,2 +1,22 @@
-<h1>Blogs#show</h1>
-<p>Find me in app/views/blogs/show.html.erb</p>
+<div class="row">
+
+<div class="large-9 push-2 columns">
+  <h1><%= @blog.title %></h1>
+  <h4> By: <%= @blog.user.name %><h4>
+    <% if !@blog.media.url.include? "missing" %>
+      <%= image_tag @blog.media.url(:medium) %>
+    <% end %>
+    <p><%= @blog.body.html_safe %><p>
+      <% if user_signed_in? && current_user == @blog.user %>
+        <%= link_to 'Edit', edit_blog_path(@blog.id), class: "button radius" %>
+        <%= link_to 'Delete', blog_path(@blog.id), method: :delete, data: {confirm: "#{current_user.name.split(' ')[0]}, You sure about that brother?"}, class: "button radius alert" %>
+      <% end %>
+</div>
+
+<div class="small-3 pull-10 columns panel">
+  <ul class="side-nav">
+    <li><%= link_to "This is a link", root_path,  class: "button radius" %></li>
+    <li><%= link_to "another link", root_path, class: "button radius" %></li>
+    <li><%= link_to "also a link", root_path, class: "button radius" %></li>
+</div>
+</div>

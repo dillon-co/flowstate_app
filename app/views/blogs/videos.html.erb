@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+    <%= form_for Blog.new, :url => blog_path, :html => { :multipart => true } do |f| %>
+        <%= f.file_field :media %>
+
+        <%= f.submit "Upload Video!" %>
+    <% end %>
+<% end %>

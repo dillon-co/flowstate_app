@@ -13,7 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require ckeditor-jquery
 //= require_tree .
 $(function() {
   $(document).foundation();
 });
+
+$('.ckeditor').ckeditor({})

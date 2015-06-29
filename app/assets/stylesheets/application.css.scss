@@ -18,3 +18,35 @@
   color: white;
   margin-left: 25px;
 }
+
+.blog_summary {
+  max-height: 3em;
+  // width: 200px;
+  overflow: hidden;
+  // text-overflow: ellipsis;
+}
+
+
+.top-bar {
+ background-color: #050429;
+}
+
+// .button:hover{
+//   background-color: #211FA8;
+// }
+//
+// .button{
+//   background-color: #FF5F07;
+// }
+//
+.button.tiny.round{
+  background-color: #FF5F07;
+}
+
+.row.panel{
+  // background-color: #251FA8
+}
+
+.right:hover{
+  background-color: #FF5F07;
+}

@@ -1,18 +1,20 @@
 Rails.application.routes.draw do
-  get 'blogs/index'
 
-  get 'blogs/show'
+  get 'videos/index'
 
-  get 'blogs/new'
+  get 'videos/new'
 
-  get 'blogs/edit'
+  get 'videos/show'
 
-  get 'blogs/show'
+  get 'videos/create'
 
-  get 'blogs/index'
+  get 'videos/destroy'
+
+  get 'videos/edit'
 
   root to: 'visitors#index'
   devise_for :users
   resources :users
   resources :blogs
+  resources :videos, only: [:index, :new, :create]
 end

@@ -1,2 +1,41 @@
-<h1>Blogs#index</h1>
-<p>Find me in app/views/blogs/index.html.erb</p>
+<div class="row">
+
+    <div class="large-9 columns">
+    <% @blogs.each do |blog| %>
+
+            <div class="row panel" role="content">
+
+              <article>
+                <h1><%= blog.title %></h1>
+                <span>
+                  <% if !blog.media.url.include? "missing" %>
+                    <%= image_tag blog.media.url(:medium) %>
+                  <% end %>
+              </span>
+                <h6>Written By: <%= blog.user.name %></h6>
+
+                <div class="row">
+                <div class="large-10 columns">
+                  <div class="blog_summary">
+                    <%= blog.body.html_safe %>
+                </div>
+              </div>
+            </div>
+                <%= link_to 'Read This', url_for(blog), class: "button round" %>
+          </article>
+          </div>
+          <hr/>
+
+    <% end %>
+</div>
+
+    <aside class="large-3 columns">
+      <div class="panel ">
+        <h4>Featured</h4>
+        <h5><%= @blogs.last.title %></h5>
+        <p class= "blog_summary"><%= @blogs.last.body %></p>
+          <%= link_to 'Read This', url_for(@blogs.last), class: "button tiny round"%>
+        </div>
+      </aside>
+
+</div>

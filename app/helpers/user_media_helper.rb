@@ -1,0 +1,2 @@
+module UserMediaHelper
+end

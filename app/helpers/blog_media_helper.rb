@@ -1,0 +1,2 @@
+module BlogMediaHelper
+end

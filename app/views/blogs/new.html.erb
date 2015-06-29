@@ -1,9 +1,13 @@
 <div class="container">
- <% form_for @blog do |f| %>
+ <%= form_for @blog, :url => blogs_path, :html => { :multipart => true } do |f| %>
      <%= f.label :title %>
      <%= f.text_field :title, :autofocus => true, class: 'form-control' %>
      <%= f.label :body %>
-     <%= f.text_field :body, :autofocus => true, class: 'form-control' %>
-    <%= f.submit 'Write it!' %>
+     <%= f.text_area :body, :autofocus => true, class: 'ckeditor' %>
+     <p>Add A Cover Photo!</a>
+     <%= f.file_field :media %>
+     <% if user_signed_in? %>
+        <%= f.submit 'Write it!', :class => "button round" %>
+    <% end %>
 <% end %>
 </div>

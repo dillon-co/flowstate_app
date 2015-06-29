@@ -1,2 +1,20 @@
-<h3>Welcome</h3>
-<p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
+<!-- <h3>Welcome</h3> -->
+
+<div class="row">
+        <div class="large-12 columns">
+        <div id="slider">
+          <%= image_tag("mountainbikehiking.jpg") %>
+        </div>
+
+        <hr/>
+        </div>
+      </div>
+
+<ul class="small-block-grid-3">
+
+  <% @blog_arr.each do |blog| %>
+    <% if blog != nil %>
+      <li class="panel"><h3><%= blog.title %></h3><%= link_to "Read This", url_for(blog), class:"button round" %></li>
+    <% end %>
+  <% end %>
+</ul>

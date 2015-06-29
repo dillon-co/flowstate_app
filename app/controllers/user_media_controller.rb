@@ -1,0 +1,2 @@
+class UserMediaController < ApplicationController
+end

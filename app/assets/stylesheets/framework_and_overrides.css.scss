@@ -10,6 +10,7 @@
   color: white;
   padding: 0 15px; }
 
+
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create mixins using Foundation classes
 @mixin twelve-columns {
@@ -37,7 +38,7 @@
   @extend .radius;
   }
 
-  
+
 // apply styles to HTML elements
 // to make views framework-neutral
 main {
