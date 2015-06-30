@@ -21,7 +21,7 @@
                 </div>
               </div>
             </div>
-                <%= link_to 'Read This', url_for(blog), class: "button round" %>
+                <%= link_to 'Read This', url_for(blog), class: "button radius" %>
           </article>
           </div>
           <hr/>
@@ -32,7 +32,7 @@
     <aside class="large-3 columns">
       <div class="panel ">
         <h4>Featured</h4>
-        <h5><%= @blogs.last.title %></h5>
+        <h5><%= @blogs.first.title %></h5>
         <p class= "blog_summary"><%= @blogs.last.body %></p>
           <%= link_to 'Read This', url_for(@blogs.last), class: "button tiny round"%>
         </div>

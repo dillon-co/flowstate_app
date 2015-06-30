@@ -1,6 +1,7 @@
 class VideosController < ApplicationController
 
   def index
+    @videos = Video.all
   end
 
   def new
@@ -18,9 +19,8 @@ class VideosController < ApplicationController
   end
 
   def show
+    @video = Video.find(params[:id])
   end
-
-
 
   def destroy
   end

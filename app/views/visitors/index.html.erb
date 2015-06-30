@@ -9,12 +9,11 @@
         <hr/>
         </div>
       </div>
+<hr/>
+<!-- <ul class="small-block-grid-3"> -->
 
-<ul class="small-block-grid-3">
-
-  <% @blog_arr.each do |blog| %>
+  <% blog = Blog.all.sample %>
     <% if blog != nil %>
-      <li class="panel"><h3><%= blog.title %></h3><%= link_to "Read This", url_for(blog), class:"button round" %></li>
-    <% end %>
-  <% end %>
-</ul>
+      <li><h3><%= blog.title %></h3><%= link_to "Read This", url_for(blog), class:"button radius" %></li>
+    <% end %> 
+<!-- </ul> -->

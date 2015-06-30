@@ -5,13 +5,13 @@
     <div id="player-wrapper"></div>
 
     <% @videos.in_groups_of(3) do |group| %>
-      <div class="row">
+      <!-- <div class="row"> -->
         <% group.each do |video| %>
           <% if video %>
-            <div class="col-md-4">
-              <div class="yt_video thumbnail">
-                <%= image_tag "https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
-                              class: 'yt_preview img-rounded', :"data-uid" => video.uid %>
+            <!-- <div class="col-md-4"> -->
+              <div class="embed-container">
+                <% video.embed(video.link) %>
+                <%= content_tag(:iframe, nil, src: "//www.youtube.com/embed/#{video.youtube_id}") %>
 
                 <div class="caption">
                   <h5><%= video.title %></h5>
@@ -23,7 +23,7 @@
                   </p>
                 </div>
               </div>
-            </div>
+            <!-- </div> -->
           <% end %>
         <% end %>
       </div>
