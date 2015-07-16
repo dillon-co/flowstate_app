@@ -138,9 +138,11 @@
   background-color: #B0496C;
 }
 
+.main{
+  min-height: 100%;
+}
+
 #body{
-  margin-top:   -1px;
-  min-height: 100vh;
 }
 
 .embed-container {
