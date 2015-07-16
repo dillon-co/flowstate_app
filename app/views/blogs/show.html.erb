@@ -18,10 +18,12 @@
   <ul class="side-nav">
     <h4>Moar Stuff!</h4><hr/>
     <% if @blog != Blog.last %>
-        <li><%= link_to "Next", blog_path(@blog.id+1),  class: "button radius", id:"button1" %></li>
+        <li><%= link_to "Next", blog_path(@blog.next.id),  class: "button radius", id:"button1" %></li>
     <% end %>
-      <li><%= link_to "Previous", blog_path(@blog.id-1), class: "button radius", id:"button2" %></li>
-    <li><%= link_to "Videos", root_path, class: "button radius", id:"button3" %></li>
+    <% if @blog != Blog.first %>
+      <li><%= link_to "Previous", blog_path(@blog.previous.id), class: "button radius", id:"button2" %></li>
+    <% end %>
+    <li><%= link_to "Videos", videos_path, class: "button radius", id:"button3" %></li>
 </div>
 </span>
 </div>

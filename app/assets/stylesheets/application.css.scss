@@ -16,9 +16,14 @@
 @import 'foundation-icons';
 
 .title {
+  a{
+    color: white;
+  }
   color: white;
   margin-left: 25px;
 }
+
+
 
 .blog_summary {
   max-height: 3em;
@@ -41,11 +46,7 @@
 }
 
 .div-thing {
-  @media(max-width: 300px){
-    width: 200px;
-    position: absolute; 
-  }
-  @media (min-width: 500px){
+  @media (min-width: 1200px){
     position: fixed;
     float: left;
     left: 0;
@@ -138,7 +139,7 @@
 }
 
 #body{
-  margin-top: 50px;
+  margin-top:   5px;
 }
 
 .embed-container {

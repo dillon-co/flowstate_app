@@ -65,12 +65,8 @@
   <!-- <div class="col-md-4"> -->
     <div class="embed-container">
     <h2><%= video.title %></h2>
-      <% video.embed(video.link) %>
+      <!-- <% video.embed(video.link) %> -->
       <%= content_tag(:iframe, nil, src: "//www.youtube.com/embed/#{video.youtube_id}") %>
-
-
-        <p>Author: <b><%= video.author %></b></p>
-        <p>Duration: <b><%= video.duration %></b></p>
         <p>
           <span class="glyphicon glyphicon glyphicon-thumbs-up"></span> <%= video.likes %>
           <span class="glyphicon glyphicon glyphicon-thumbs-down"></span> <%= video.dislikes %>

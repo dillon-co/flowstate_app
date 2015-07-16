@@ -22,5 +22,17 @@ class Blog < ActiveRecord::Base
 
   # scope :by_created_at, order("created_at DESC")
 
+  def next
+    self.class.where("id > ?", id).first
+  end
+
+  def previous
+     previous = self.class.where("id < ?", id).last
+     if previous.nil?
+      previous = self.class.last
+     end
+     return previous
+  end
+
   default_scope { order(:created_at) }
 end
