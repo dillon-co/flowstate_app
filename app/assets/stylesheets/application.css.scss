@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+@import 'foundation-icons';
 
 .title {
   color: white;
@@ -26,9 +27,85 @@
   // text-overflow: ellipsis;
 }
 
+.blog_summary2 {
+  max-height: 4em;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.aside{
+  // width: 350px;
+  @media (min-width: 300px){
+    float: right;
+  }
+}
+
+.div-thing {
+  @media(max-width: 300px){
+    width: 200px;
+    position: absolute; 
+  }
+  @media (min-width: 500px){
+    position: fixed;
+    float: left;
+    left: 0;
+    width: 275px;
+  }
+}
+
+.fixed-class{
+  position: fixed;
+  top: 100;
+  left: 0;
+}
+
+// .some-class{
+ // position: fixed;
+//   top: 100;
+//   right: 0;
+// }
+
+#button1{
+  background-color: #253569;
+}
+
+#button2{
+  background-color: #B0496C;
+}
+
+#button3{
+  background-color: #8139BA
+}
+
+.girl{
+  margin-left: 10px;
+}
+
+.icon {
+  margin-left: 150px;
+  font-size: 75px;
+}
+
+.medium-4 {
+  color: #5E6663;
+}
+
+.fi-layout{
+  margin-right: 50px;
+}
+
+#home-icon-panel {
+  // border-color: #3A52A;
+  // border: 7px inset #36B04C;
+  border-radius: 12px;
+}
+
+#home-words {
+  margin-left: 75px;
+}
 
 .top-bar {
- background-color: #050429;
+ background-color: #267D36;
 }
 
 // .button:hover{
@@ -47,8 +124,9 @@
   background-color: #39B9BA
 }
 
-.row.panel{
+.panel{
   // background-color: #251FA8
+  border-radius: 5px;
 }
 
 .button:hover{
@@ -59,7 +137,9 @@
   background-color: #B0496C;
 }
 
-
+#body{
+  margin-top: 50px;
+}
 
 .embed-container {
   position: relative;

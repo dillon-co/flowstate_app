@@ -12,6 +12,8 @@ gem "paperclip-ffmpeg"
 gem 'aws-sdk'
 gem 'youtube_it'
 gem 'ckeditor_rails'
+gem 'foundation-icons-sass-rails'
+gem 'delayed_job_active_record'
 
 group :development, :test do
   gem 'byebug'

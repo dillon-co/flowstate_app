@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hey <%= @user.name.split(' ')[0] %>!</h1>
+    <p>
+      You just created a blog with the title of "<%= @user.blogs.last.title %>"<br/><br/>
+      If you didn't create this blog you may want to check the website because you're probably being trolled by one of your bros. <br/><br/><br/>
+      :)
+    </p>
+  </body>
+</html>

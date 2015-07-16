@@ -1,5 +1,5 @@
 <div class="row">
-
+<span>
 <div class="large-9 push-2 columns">
   <h1><%= @blog.title %></h1>
   <h4> By: <%= @blog.user.name %><h4>
@@ -12,11 +12,16 @@
         <%= link_to 'Delete', blog_path(@blog.id), method: :delete, data: {confirm: "#{current_user.name.split(' ')[0]}, You sure about that brother?"}, class: "button radius alert" %>
       <% end %>
 </div>
-
-<div class="small-3 pull-10 columns panel">
+</span>
+<span>
+<div class="panel div-thing">
   <ul class="side-nav">
-    <li><%= link_to "This is a link", root_path,  class: "button radius" %></li>
-    <li><%= link_to "another link", root_path, class: "button radius" %></li>
-    <li><%= link_to "also a link", root_path, class: "button radius" %></li>
+    <h4>Moar Stuff!</h4><hr/>
+    <% if @blog != Blog.last %>
+        <li><%= link_to "Next", blog_path(@blog.id+1),  class: "button radius", id:"button1" %></li>
+    <% end %>
+      <li><%= link_to "Previous", blog_path(@blog.id-1), class: "button radius", id:"button2" %></li>
+    <li><%= link_to "Videos", root_path, class: "button radius", id:"button3" %></li>
 </div>
+</span>
 </div>

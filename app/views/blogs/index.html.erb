@@ -28,14 +28,16 @@
 
     <% end %>
 </div>
-
-    <aside class="large-3 columns">
-      <div class="panel ">
-        <h4>Featured</h4>
-        <h5><%= @blogs.first.title %></h5>
-        <p class= "blog_summary"><%= @blogs.last.body %></p>
-          <%= link_to 'Read This', url_for(@blogs.last), class: "button tiny round"%>
+<div class="some-class">
+    <aside class="large-3 columns aside">
+        <div class="panel">
+            <h4>Featured</h4><hr/>
+            <h5><strong><%= @blogs.first.title %></strong></h5>
+            <div class="blog_summary2">
+                <p><%= @blogs.first.body.html_safe %></p>
+            </div>
+          <%= link_to 'Read This', url_for(@blogs.first), class: "button tiny round"%>
         </div>
-      </aside>
-
+    </aside>
+</div>
 </div>
