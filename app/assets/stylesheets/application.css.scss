@@ -21,6 +21,8 @@
   }
   color: white;
   margin-left: 25px;
+  margin-top: 3px;
+  font-size: 150%
 }
 
 
@@ -44,6 +46,8 @@
     float: right;
   }
 }
+
+
 
 .div-thing {
   @media (min-width: 1200px){
@@ -107,6 +111,7 @@
 
 .top-bar {
  background-color: #267D36;
+ // min-height: 50px
 }
 
 // .button:hover{
@@ -143,6 +148,7 @@
 }
 
 #body{
+  min-height: 120%;
 }
 
 .embed-container {
